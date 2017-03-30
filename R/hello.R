@@ -1,6 +1,6 @@
 # Hello, world!
 #
-# This is an example function named 'hello' 
+# This is an example function named 'hello'
 # which prints 'Hello, world!'.
 #
 # You can learn more about package authoring with RStudio at:
@@ -13,6 +13,30 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-hello <- function() {
+#' Hello
+#'
+#' Hello world
+#'
+#' Hello world details
+#'
+#' @param x An integer
+#' @param y An integer
+#'
+#' @return A chracter vector
+#' @export
+#'
+#' @examples
+#' hello()
+hello <- function(x = 2, y = 3) {
   print("Hello, world!")
+}
+
+#' Title
+#'
+#' @inheritDotParams hello
+#'
+#' @inherit hello return
+#' @export
+hello2 <- function(...) {
+  hello(...)
 }
